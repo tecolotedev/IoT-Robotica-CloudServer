@@ -17,10 +17,10 @@ app.get('/', function(req, res) {
 });
 
 app.post('/posicion',(req,res)=>{
-  axios.post(`${process.env.PUERTO}/posicion`,req.data).then(res=>console.log(res)).cath(err=>console.log(err));
-  res.json({ok:true,puerto:process.env.PUERTO})
+  axios.post(`${process.env.PUERTO}/posicion`,req.data).then(res=>console.log('funciona')).catch(err=>console.log('hubo un error'));
+  res.json({ok:true,puerto:process.env.PUERTO,prueba:'asdfjahkjf'})
 });
 
 let puerto = process.env.PORT || 9000;
 
-app.listen(puerto);
+app.listen(puerto,()=>console.log(9000));
