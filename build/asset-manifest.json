@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.f5ef3909.chunk.css",
-    "main.js": "/static/js/main.7af79fb1.chunk.js",
-    "main.js.map": "/static/js/main.7af79fb1.chunk.js.map",
+    "main.js": "/static/js/main.019a5e07.chunk.js",
+    "main.js.map": "/static/js/main.019a5e07.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e077b804.js",
     "runtime-main.js.map": "/static/js/runtime-main.e077b804.js.map",
     "static/js/2.e3d827e1.chunk.js": "/static/js/2.e3d827e1.chunk.js",
     "static/js/2.e3d827e1.chunk.js.map": "/static/js/2.e3d827e1.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b71fcf27d93899084acba1b9a506d6eb.js": "/precache-manifest.b71fcf27d93899084acba1b9a506d6eb.js",
+    "precache-manifest.c4781bc2b678e2941efce752588a5ad9.js": "/precache-manifest.c4781bc2b678e2941efce752588a5ad9.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.f5ef3909.chunk.css.map": "/static/css/main.f5ef3909.chunk.css.map",
     "static/media/aragon.jpg": "/static/media/aragon.5100f13f.jpg",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.e077b804.js",
     "static/js/2.e3d827e1.chunk.js",
     "static/css/main.f5ef3909.chunk.css",
-    "static/js/main.7af79fb1.chunk.js"
+    "static/js/main.019a5e07.chunk.js"
   ]
 }
