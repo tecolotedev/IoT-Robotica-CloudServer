@@ -18,6 +18,7 @@ app.get('/', function(req, res) {
 
 app.post('posicion',(req,res)=>{
   axios.post(`${process.env.PUERTO}/posicion`,req.data).then(res=>console.log(res)).cath(err=>console.log(err));
+  res.json({ok:true,puerto:process.env.PUERTO})
 });
 
 let puerto = process.env.PORT || 9000;
