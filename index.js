@@ -5,10 +5,10 @@ const bodyParser = require('body-parser');
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 
-const theta11Server = 0;
-const theta21Server = 0;
-const theta12Server = 48.18*Math.PI/180;
-const theta22Server = 131.82*Math.PI/180;
+let theta11Server = 0;
+let theta21Server = 0;
+let theta12Server = 48.18*Math.PI/180;
+let theta22Server = 131.82*Math.PI/180;
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
