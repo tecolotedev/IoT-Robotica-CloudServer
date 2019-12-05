@@ -27,12 +27,13 @@ app.post('/posicion',(req,res)=>{
   const {theta11,theta21,theta12,theta22} = req.body;
 
   io.emit('iniciarAngulos',{theta11:theta11*Math.Pi/180,theta21:theta21*Math.Pi/180,theta12:theta12*Math.Pi/180,theta22:theta22*Math.Pi/180});
+  theta11Server = theta11*Math.Pi/180;
+  theta21Server = theta21*Math.Pi/180;
+  theta12Server = theta12*Math.Pi/180;
+  theta22Server = theta22*Math.Pi/180;
   axios.post(`${process.env.PUERTO}/posicion`,req.body).then(res=>{
                                                             io.emit('iniciarAngulos',res.data);
-                                                            theta11Server = res.data.theta11Server;
-                                                            theta21Server = res.data.theta21Server;
-                                                            theta12Server = res.data.theta12Server;
-                                                            theta22Server = res.data.theta22Server;
+                                                            
                                                           }).catch(err=>{io.emit('iniciarAngulos',res.data);
                                                           console.log('hubo un error');
                                                           });
@@ -41,13 +42,13 @@ app.post('/posicion',(req,res)=>{
 
 
 
-// io.on('connection', (client) => { 
-//   console.log('conectado');
-//   io.emit('iniciarAngulos',{theta11Server,
-//                             theta21Server,
-//                             theta12Server,
-//                             theta22Server});  
-// });
+io.on('connection', (client) => { 
+  console.log('conectado');
+  io.emit('iniciarAngulos',{theta11Server,
+                            theta21Server,
+                            theta12Server,
+                            theta22Server});  
+});
 
 
 
